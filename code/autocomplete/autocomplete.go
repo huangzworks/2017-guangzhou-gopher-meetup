@@ -1,9 +1,6 @@
-package main
+package autocomplete
 
-import (
-	"fmt"
-	"github.com/mediocregopher/radix.v2/redis"
-)
+import "github.com/mediocregopher/radix.v2/redis"
 
 const autocomplete = "autocomplete::"
 

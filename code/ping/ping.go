@@ -1,9 +1,6 @@
-package main
+package ping
 
-import (
-	"fmt"
-	"github.com/mediocregopher/radix.v2/redis"
-)
+import "github.com/mediocregopher/radix.v2/redis"
 
 func main() {
 	client, _ := redis.Dial("tcp", "localhost:6379")
