@@ -5,7 +5,7 @@ import "github.com/mediocregopher/radix.v2/redis"
 const autocomplete = "autocomplete::"
 
 func feed(client *redis.Client, content string, weight int) {
-	for i, _ := range content {
+	for i := range content {
 		segment := content[:i+1]
 		key := autocomplete + segment
 		client.Cmd("ZINCRBY", key, weight, content)
